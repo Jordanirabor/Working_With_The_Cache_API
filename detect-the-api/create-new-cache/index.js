@@ -1,0 +1,1 @@
+const newCache = await caches.open('new-cache');
