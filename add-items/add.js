@@ -12,7 +12,10 @@ if ('caches' in window) {
 if ('caches' in window) {
     const newCache = await caches.open('new-cache');
     const options = {
-        // your options go here
+        method: "GET",
+        headers: new Headers({
+		    'Content-Type': 'text/html'
+	    }),
       }
     newCache.add(new Request('/cats.json', options))
 }
